@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using Sample.Api.Services;
 
 namespace Sample.Api.Controllers;
 
@@ -34,6 +35,9 @@ public class WeatherForecastController : ControllerBase
     [Route("today")]
     public IActionResult GetToday()
     {
+        dynamic o = new WithoutFoo();
+        o.Foo(3);
+
         return Ok();
     }
 }
