@@ -28,10 +28,10 @@ jobs:
         dotnet-version: ${{ env.DOTNET_VERSION }}
 
     - name: Install dependencies
-      run: dotnet restore ./src/Sample.Api
+      run: dotnet restore
       
     - name: Build SampleApi
-      run: dotnet build ./src/Sample.Api --configuration Release --no-restore
+      run: dotnet build --configuration Release --no-restore
 
     - name: Test
-      run: dotnet test ./src/Sample.Tests --no-restore --verbosity normal
+      run: dotnet test --no-restore --verbosity normal
