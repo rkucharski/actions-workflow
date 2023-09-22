@@ -28,7 +28,7 @@ jobs:
         dotnet-version: ${{ env.DOTNET_VERSION }}
 
     - name: Install dependencies
-      run: dotnet restore
+      run: dotnet restore ./src/Sample.Api
       
     - name: Build SampleApi
       run: dotnet build ./src/Sample.Api --configuration Release --no-restore
