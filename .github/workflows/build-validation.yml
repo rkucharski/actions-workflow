@@ -32,3 +32,6 @@ jobs:
       
     - name: Build SampleApi
       run: dotnet build ./src/Sample.Api --configuration Release --no-restore
+
+    - name: Test
+      run: dotnet test ./src/Sample.Tests --no-restore --verbosity normal
